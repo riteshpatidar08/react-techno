@@ -18,8 +18,13 @@ const [product, setProduct] = useState('tv')
  setFirstName('abc')
  }
 
+ const cardData = [
+  {img : htmlimg , text:'HTML'},{img:cssimg , text:'CSS'},
+  {img:jsimg,text:'javascript'}
+ ]
+
  const emojiArray = ['❌','✅','🚀','🍿']
- 
+
   return (
     <>
     <button className="px-6 py-2 bg-red-500 rounded-sm m-4 text-white" onClick={handleClick} >Click</button>
@@ -31,9 +36,9 @@ const [product, setProduct] = useState('tv')
  
     <p className='text-3xl m-3'>{firstName}</p>
       <div className='flex justify-center'>
-      <Card img={htmlimg} text='HTML'/>
-      <Card img={cssimg} text='CSS'/>
-      <Card img={jsimg} text='JAVASCRIPT'/>
+      {cardData.map((el)=>(
+        <Card img={el.img} text={el.text}/>
+      ))}
       </div>
     </>
 
