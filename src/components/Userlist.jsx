@@ -1,11 +1,13 @@
 import React from 'react'
 
-function Userlist() {
+function Userlist({username,password}) {
 
     const users = ['ritesh','ranjeet','pushpendra','pankaj','aman'];
 
   return (
-    <div>
+    <div className='border-2 border-red-500'>
+  <h1>{password}</h1>
+<h1>{username}</h1>
         <ul>
             {
                 users.map((listItem,index)=>(

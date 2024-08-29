@@ -1,13 +1,17 @@
 import React from 'react'
 import { useState } from 'react'
-function Form() {
 
-    const [username,setUsername] = useState(' ');
-    const [password,setPassword] = useState(' ');
+
+function Form({password,username,setPassword,setUsername}) {
+
 
     const handleUsernameChange = (event) => {
     console.log(event.target.value)
     setUsername(event.target.value)
+    }
+
+    const handlePasswordChange = (event)=>{
+        setPassword(event.target.value)
     }
 
   return (
@@ -16,7 +20,7 @@ function Form() {
         <label htmlFor='username'>Username</label>
         <input onChange={handleUsernameChange} type='text' id='username' value={username} />
         <label htmlFor='password'>Password</label>
-        <input type='text' id='password'/>
+        <input onChange={handlePasswordChange} type='text' id='password'/>
         <button type='submit'>Submit</button>
       </form>
 

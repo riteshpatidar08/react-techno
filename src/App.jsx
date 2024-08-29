@@ -12,7 +12,11 @@ function App() {
 
   //NOTE creating state for the data which changes in our application so that react rerender our application to show the updated content
 const [product, setProduct] = useState('tv')
+
  const[firstName , setFirstName]= useState('ritesh')
+
+const [username,setUsername] = useState(' ');
+const [password,setPassword] = useState(' ');
 
  //NOTE Handling the events
  const handleClick = () => {
@@ -30,8 +34,10 @@ const [product, setProduct] = useState('tv')
 
   return (
     <>
-    <Userlist/>
-    <Form/>
+{/* lifting the state-up */}
+    <Userlist username={username} password={password}/>
+    <Form username={username} setUsername={setUsername} password={password} setPassword={setPassword}/>
+
     <button className="px-6 py-2 bg-red-500 rounded-sm m-4 text-white" onClick={handleClick} >Click</button>
 
    {/* rendering a list in react */}
@@ -59,6 +65,13 @@ export default App;
 //NOTE UseState = used to save the data which changes over time in our application.
 
 //NOTE List rendering = used to render the list of items when you want to show it on the screen 
+
+//NOTE GETTING THE  VALUES FROM FORM FIEDLS 
+//STEP 1 First pass an onChange event input field
+//STEP 2 Create an event handler which access the value from the input field when you type in it to get the value "event" object is automatically available in the params of the handleEvent function from thier you can use "event.target.value" to get the value of the input field and save it in a state.eg : setUsername(event.target.value) 
+
+
+//NOTE LIFTING THE STATE UP = means when you have share data from one sibling component to other sibling component you have to get thier parent component and define the state their to share data between both of them using props.
 
 //TODO VIRTUAL DOM 
 //TODO FORM HANDLING
