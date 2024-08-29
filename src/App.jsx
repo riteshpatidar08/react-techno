@@ -5,6 +5,8 @@ import { useState } from 'react';
 import htmlimg from './assets/HTML5.svg';
 import cssimg from './assets/CSS3.svg';
 import jsimg from './assets/JavaScript.svg'
+import Userlist from './components/Userlist.jsx';
+import Form from './components/Form.jsx';
 
 function App() {
 
@@ -19,14 +21,17 @@ const [product, setProduct] = useState('tv')
  }
 
  const cardData = [
-  {img : htmlimg , text:'HTML'},{img:cssimg , text:'CSS'},
-  {img:jsimg , text:'javascript'}
+  {id : 1, img : htmlimg , text:'HTML'},
+  {id : 2 ,img:cssimg , text:'CSS'},
+  {id : 3 ,img:jsimg , text:'Javascript'}
  ]
 
- const emojiArray = ['❌','✅','🚀','🍿']
+ const emojiArray = ['❌','✅','🚀','🍿'] ;
 
   return (
     <>
+    <Userlist/>
+    <Form/>
     <button className="px-6 py-2 bg-red-500 rounded-sm m-4 text-white" onClick={handleClick} >Click</button>
 
    {/* rendering a list in react */}
@@ -37,7 +42,7 @@ const [product, setProduct] = useState('tv')
     <p className='text-3xl m-3'>{firstName}</p>
       <div className='flex justify-center'>
       {cardData.map((el)=>(
-        <Card img={el.img} text={el.text}/>
+        <Card key={el.id} img={el.img} text={el.text}/>
       ))}
       </div>
     </>
