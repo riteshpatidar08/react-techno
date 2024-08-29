@@ -20,7 +20,7 @@ const [product, setProduct] = useState('tv')
 
  const cardData = [
   {img : htmlimg , text:'HTML'},{img:cssimg , text:'CSS'},
-  {img:jsimg,text:'javascript'}
+  {img:jsimg , text:'javascript'}
  ]
 
  const emojiArray = ['❌','✅','🚀','🍿']
@@ -46,3 +46,16 @@ const [product, setProduct] = useState('tv')
 }
 
 export default App;
+
+//NOTE Props = passing data from parent to child.
+
+//NOTE Events = handle the interactions.
+
+//NOTE UseState = used to save the data which changes over time in our application.
+
+//NOTE List rendering = used to render the list of items when you want to show it on the screen 
+
+//TODO VIRTUAL DOM 
+//TODO FORM HANDLING
+//TODO USEFFECT
+//TODO PROP DRILLING
