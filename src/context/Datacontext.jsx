@@ -18,3 +18,33 @@ export const DataProvider = ({children}) => {
     {children}
     </Datacontext.Provider>
 }
+
+
+//USING CONTEXT IN REACT TO SHARE THE DATA OR STATE GLOBALLY IN THE APPLICATION
+
+//STEP1 import createContext from 'react
+//2 - call the createContext and save the result in the variable ending with suffix "context" eg: Datacontext ;
+
+//3 - now create a component whose name ends with the provider for example DataProvider
+
+//4 declare the data you want to share across your application there
+
+//5 now you have to return the data from that component using the context you have created by calling createContext() function
+
+// 6 return 
+{/* <Datacontext.provider value={{datatoShare}}></Datacontext.provider> */}
+
+//7 then you have to export both the component and provider
+
+//8 import the provider in the main.jsx file and wrap it around app 
+// like <DataProvider>
+// <App/>
+// </DataProvider>
+
+//9 when you pass something in between the opening and closing tag of the component it is treated children of the component
+
+//10 then you have to go to the context file and destructure in the component params like ({children})
+
+// 11 at last pass the children in the between the return statement like {/* <Datacontext.provider value={{datatoShare}}>
+// {children}
+// </Datacontext.provider> */}
