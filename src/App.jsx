@@ -1,5 +1,8 @@
 import React, { useEffect , useState } from 'react'
 import Product from './components/Product';
+import Description from './components/Description';
+import Profile from './components/Profile';
+
 function App() {
   const [count ,setCount] = useState(0);
 
@@ -18,12 +21,18 @@ function App() {
     console.log('this will run when count increase')
   },[count])
 
+  const data = {
+    user : 'ritesh'
+  }
 
   return (
     <div>
-      <p>{count}</p>
-    <button onClick={()=>{setCount(count+1)}}>increase</button>
-    <Product/>
+      {/* <p>{count}</p>
+    <button onClick={()=>{setCount(count+1)}}>increase</button> */}
+
+   
+    <Description user={data}/>
+    <Profile user={data}/>
     </div>
   )
 }

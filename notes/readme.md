@@ -74,6 +74,8 @@ export default App;
 
 //NOTE FORM HANDLING  onSubmit , onChange
 
-//NOTE USEEFFECT  = Used to implement side-effects like fetching data , directly manipulated the dom , defines the lifycycle of the component when it mounts means firts loads on the page , 
+//NOTE USE-EFFECT  = Used to implement side-effects like fetching data , directly manipulating the dom , defines the lifycycle of the component when it mounts means first loads on the page , 
 
 //NOTE PROP-DRILLING IN THE REACT:
+
+//REVIEW The functions we are using starting with the "use" prefix are known as react hooks for eg useEffect, useState which only be used inside the functional component , these are the react features to implement the extra functionality in our application.
