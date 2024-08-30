@@ -33,9 +33,9 @@ export const DataProvider = ({children}) => {
 //5 now you have to return the data from that component using the context you have created by calling createContext() function
 
 // 6 return 
-{/* <Datacontext.provider value={{datatoShare}}> </Datacontext.provider> */}
+{/* <Datacontext.Provider value={{datatoShare}}> </Datacontext.provider> */}
 
-//7 then you have to export both the component and provider
+//7 then you have to export both the context and provider
 
 //8 import the provider in the main.jsx file and wrap it around app 
 // like <DataProvider>
@@ -60,4 +60,4 @@ export const DataProvider = ({children}) => {
 
 //step4 pass the DataContext in the useContext(DataContext);
 
-//step5 directly destruture the data you want to show in that component
+//step5 directly destruture the data you want to show in that component.
