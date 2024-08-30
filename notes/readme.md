@@ -72,8 +72,8 @@ export default App;
 
 //NOTE LIFTING THE STATE UP = means when you have share data from one sibling component to other sibling component you have to get thier parent component and define the state their to share data between both of them using props.
 
+//NOTE FORM HANDLING  onSubmit , onChange
 
-//TODO VIRTUAL DOM 
-//TODO FORM HANDLING
-//TODO USEFFECT
-//TODO PROP DRILLING
+//NOTE USEEFFECT  = Used to implement side-effects like fetching data , directly manipulated the dom , defines the lifycycle of the component when it mounts means firts loads on the page , 
+
+//NOTE PROP-DRILLING IN THE REACT:
