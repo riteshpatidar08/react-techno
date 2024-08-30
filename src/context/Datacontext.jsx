@@ -20,9 +20,10 @@ export const DataProvider = ({children}) => {
 }
 
 
-//USING CONTEXT IN REACT TO SHARE THE DATA OR STATE GLOBALLY IN THE APPLICATION
+//USING CONTEXT IN REACT TO SHARE THE DATA OR STATE GLOBALLY IN THE APPLICATION.
 
-//STEP1 import createContext from 'react
+//STEP1 import createContext from 'react.
+
 //2 - call the createContext and save the result in the variable ending with suffix "context" eg: Datacontext ;
 
 //3 - now create a component whose name ends with the provider for example DataProvider
@@ -32,7 +33,7 @@ export const DataProvider = ({children}) => {
 //5 now you have to return the data from that component using the context you have created by calling createContext() function
 
 // 6 return 
-{/* <Datacontext.provider value={{datatoShare}}></Datacontext.provider> */}
+{/* <Datacontext.provider value={{datatoShare}}> </Datacontext.provider> */}
 
 //7 then you have to export both the component and provider
 
@@ -48,3 +49,15 @@ export const DataProvider = ({children}) => {
 // 11 at last pass the children in the between the return statement like {/* <Datacontext.provider value={{datatoShare}}>
 // {children}
 // </Datacontext.provider> */}
+
+//NOTE CONSUMING THE SHARED DATA
+
+//step 1 go to the component where to want that data
+
+//step2 import the useContext hook from react
+
+//step3 import the context you have created in the eg we have Datacontext
+
+//step4 pass the DataContext in the useContext(DataContext);
+
+//step5 directly destruture the data you want to show in that component
