@@ -6,8 +6,8 @@ function Userlist({username,password}) {
 
   return (
     <div className='border-2 border-red-500'>
-  <h1>{password}</h1>
-<h1>{username}</h1>
+        <h1>{password}</h1>
+        <h1>{username}</h1>
         <ul>
             {
                 users.map((listItem,index)=>(
