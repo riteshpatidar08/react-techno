@@ -4,11 +4,13 @@ import { Routes, Route } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Homepage from './pages/Homepage'
 import Services from './pages/Services'
+import Input from './components/Input'
 function App() {
  
   return (
     <>
      <Navbar/>
+     <Input/>
    <Routes>
     <Route path='/' element={<Homepage/>} />
     <Route path="/services" element={<Services/>} />
