@@ -1,11 +1,20 @@
 import React from 'react'
 import Product from './components/Product'
 import { Routes, Route } from 'react-router-dom'
+import Navbar from './components/Navbar'
+import Homepage from './pages/Homepage'
+import Services from './pages/Services'
 function App() {
+ 
   return (
+    <>
+     <Navbar/>
    <Routes>
+    <Route path='/' element={<Homepage/>} />
+    <Route path="/services" element={<Services/>} />
     <Route path='/product' element= {<Product/>}/>
    </Routes>
+   </>
   )
 }
 
