@@ -1,6 +1,6 @@
 import React, { useEffect ,useState } from 'react';
 import Card from './Card';
-
+import { CircularProgress } from '@mui/material';
 function Product() {
     const [product , setProduct] = useState([]) ;
 
@@ -13,10 +13,12 @@ function Product() {
     fetchData();
   }, []);
 
-  return <div>
-    {product.map((el)=>(
+  return <div className='grid grid-cols-4'>
+  {product.length > 0 ? (product.map((el)=>(
         <Card img={el.images[0]} text={el.title} />
-    ))}
+    ))) : 
+   <CircularProgress/>}
+    
   </div>;
 }
 
