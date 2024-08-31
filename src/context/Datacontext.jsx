@@ -1,4 +1,5 @@
-//NOTE step 1 import createContext from react
+//NOTE step 1 import createContext from react 
+
 import { createContext } from "react";
 
 //Step2 call the createContext save the function result in a variable.
@@ -20,7 +21,7 @@ export const DataProvider = ({children}) => {
 }
 
 
-//USING CONTEXT IN REACT TO SHARE THE DATA OR STATE GLOBALLY IN THE APPLICATION.
+//----USING CONTEXT IN REACT TO SHARE THE DATA OR STATE GLOBALLY IN THE APPLICATION.
 
 //STEP1 import createContext from 'react.
 

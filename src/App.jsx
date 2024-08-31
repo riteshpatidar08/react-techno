@@ -1,43 +1,24 @@
-import React, { useEffect , useState } from 'react'
-import Product from './components/Product';
-import Description from './components/Description';
-import Profile from './components/Profile';
+import React from 'react'
+import Button from './components/Button';
+import { useState } from 'react';
 
 function App() {
-  const [count ,setCount] = useState(0);
 
-//NOTE without dependency array
-  useEffect(()=>{
-    console.log('this will run every time')
-  })
+  const [isLogIn,setIsLogIn] = useState(false)
 
-  //NOTE with empty dependency array
-  useEffect(()=>{
-    console.log("this will run one time when page refresh")
-  },[])
-
-  //note this will run when dependency changes or updated
-  useEffect(()=>{
-    console.log('this will run when count increase')
-  },[count])
-
-  const data = {
-    user : 'ritesh'
+  const handleClick = () => {
+    setIsLogIn(!isLogIn)
   }
-
   return (
-    <div>
-      {/* <p>{count}</p>
-    <button onClick={()=>{setCount(count+1)}}>increase</button> */}
-
-   
-    <Description user={data}/>
-    <Profile user={data}/>
+    <div className='flex justify-center'>
+    <p className='text-2xl text-sky-500 font-semibold'>{isLogIn ? 'Welcome user you are logged in' : 'Please login'}</p>
+   <button onClick={handleClick} className='px-6 py-2 bg-red-500 rounded-sm m-4 text-white'>{isLogIn ? 'Logout' : 'Login'}</button>
     </div>
   )
 }
 
-export default App
+export default App ;
 
+//Condition Rendering ;
+//using ternary operator and &&
 
-// useEffect(callback ,dependeny array) ;
