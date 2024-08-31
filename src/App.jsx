@@ -5,10 +5,12 @@ import Navbar from './components/Navbar'
 import Homepage from './pages/Homepage'
 import Services from './pages/Services'
 import Input from './components/Input'
+import Parent from './components/Parent'
 function App() {
  
   return (
     <>
+ <Parent/>
      <Navbar/>
      <Input/>
    <Routes>

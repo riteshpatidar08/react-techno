@@ -1,12 +1,17 @@
-import React from 'react'
-import { useRef } from 'react'
+import React from 'react' ;
+import { useRef } from 'react' ;
 function Input() {
+
   const inputRef =  useRef(null)
-  console.log(inputRef)
+  console.log(inputRef) ;
+
+
   const handleSubmit = (e) =>{
     e.preventDefault()
     console.log(inputRef.current.value)
+
   }
+
   return (
     <div>
     <form onSubmit={handleSubmit}>
@@ -20,5 +25,5 @@ function Input() {
 export default Input 
 
 
-//controlled components 
-//uncontrolled components ;
+//controlled components =>  the input values are controlled by react state 
+//uncontrolled components => by using useRef we can directly access the input value from DOM  .
