@@ -5,6 +5,7 @@ import { Routes ,Route } from 'react-router-dom';
 import { CircularProgress } from '@mui/material';
 
 import { Suspense , lazy } from 'react';
+import Memo from './components/Memo';
 
 const Homepage = lazy(()=>import('./pages/Homepage')) ;
 const Services = lazy(()=>import('./pages/Services')) ;
@@ -13,6 +14,7 @@ function App() {
   
   return (
     <div>
+      <Memo/>
       <Navbar/>
       <Suspense fallback={<div>loading</div>}>
       <Routes>
