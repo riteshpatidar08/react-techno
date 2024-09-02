@@ -1,6 +1,7 @@
 import React from 'react'
 import { useReducer } from 'react'
 function Reducer() {
+
     const initialState = {
         count : 0
     }
@@ -20,7 +21,7 @@ function Reducer() {
   console.log(state)
 
 const handleIncrement = () =>{
-    dispatch({tpye:'INCREMENT'})
+    dispatch({type:'INCREMENT'})
 }
 const handleIncrementByFive = () => {
     dispatch({type : 'INCREMENTBYFIVE', payload : 5})
