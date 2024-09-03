@@ -3,7 +3,6 @@ import Card from './Card';
 import { CircularProgress } from '@mui/material';
 function Product() {
     const [product , setProduct] = useState([]) ;
-
   useEffect(() => {
     const fetchData = async () => {
       const res = await fetch('https://dummyjson.com/products');

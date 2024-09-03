@@ -17,7 +17,7 @@ const Input = () => {
     <div>
       <form onSubmit={handleSubmit}>
         <input ref={inputRef} type='text' />
-        <button>Submit</button>
+        <button className=''>Submit</button>
       </form>
     </div>
   );

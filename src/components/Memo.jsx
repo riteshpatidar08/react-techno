@@ -3,11 +3,12 @@ import React, { useState ,useMemo} from 'react'
 function Memo() {
     const [numbers, setNumber] = useState([1,2,3,4,5]) ;
     const [count ,setCount] = useState(0);
+
 // useMemo(()=>{}, [])
-    const sum = useMemo(() => {
+    const sum = () => {
         console.log('calculating sum')
       return numbers.reduce((accu,num)=> accu + num , 0)
-    },[numbers])
+    }
  
     const handleAddNumber = () => {
         setNumber([...numbers , numbers.length + 1]) ;

@@ -196,7 +196,7 @@ function App() {
  const [count ,setCount] = useState(0)
   return (
     <>
-    
+<!--     
  <Parent/>
      <Navbar/>
      <Input/>
@@ -207,7 +207,7 @@ function App() {
    </Routes>
    </>
   )
-}
+} -->
 
 export default App
 
